@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>دعوت نامہ - ولیجہ بہار ❤️ احمد فیاض</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&family=Amiri:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Nastaliq Urdu', 'Amiri', serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a472a 0%, #0d2818 50%, #1a472a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  direction: rtl;
+}
+
+/* Main Card */
+.invitation-card {
+  max-width: 700px;
+  width: 100%;
+  background: linear-gradient(135deg, #fef9e7 0%, #fff8dc 50%, #fef5e7 100%);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 
+    0 30px 80px rgba(0, 0, 0, 0.4),
+    0 0 0 3px #d4af37,
+    0 0 0 6px #1a472a,
+    0 0 0 9px #d4af37;
+  position: relative;
+}
+
+/* Decorative Border Pattern */
+.card-border {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border: 2px solid #d4af37;
+  border-radius: 15px;
+  pointer-events: none;
+}
+
+.card-border::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 15px;
+  background: #fef9e7;
+}
+
+.card-border::after {
+  content: '✦';
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+  color: #d4af37;
+}
+
+/* Corner Decorations */
+.corner {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  z-index: 2;
+}
+
+.corner-tl { top: 20px; left: 20px; }
+.corner-tr { top: 20px; right: 20px; transform: scaleX(-1); }
+.corner-bl { bottom: 20px; left: 20px; transform: scaleY(-1); }
+.corner-br { bottom: 20px; right: 20px; transform: scale(-1, -1); }
+
+.corner svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Content */
+.card-content {
+  padding: 50px 40px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Bismillah Section */
+.bismillah-section {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.bismillah {
+  font-size: 2.5rem;
+  color: #1a472a;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  margin-bottom: 10px;
+}
+
+.bismillah-meaning {
+  font-size: 0.9rem;
+  color: #5a6c5a;
+  font-style: italic;
+}
+
+/* Decorative Line */
+.decorative-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.line {
+  height: 2px;
+  width: 80px;
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+}
+
+.line-icon {
+  font-size: 1.5rem;
+  color: #d4af37;
+  margin: 0 15px;
+}
+
+/* Islamic Dua */
+.dua-section {
+  text-align: center;
+  margin-bottom: 25px;
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(26, 71, 42, 0.08), rgba(212, 175, 55, 0.08));
+  border-radius: 15px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.dua-arabic {
+  font-size: 1.6rem;
+  color: #1a472a;
+  font-weight: 700;
+  line-height: 2;
+  margin-bottom: 10px;
+}
+
+.dua-translation {
+  font-size: 0.95rem;
+  color: #5a6c5a;
+  line-height: 1.8;
+}
+
+/* Invitation Text */
+.invitation-text {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.invitation-intro {
+  font-size: 1.3rem;
+  color: #2d4a2d;
+  line-height: 2.2;
+  margin-bottom: 15px;
+}
+
+.host-name {
+  font-size: 1.5rem;
+  color: #1a472a;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.invitation-request {
+  font-size: 1.2rem;
+  color: #3d5a3d;
+  line-height: 2;
+}
+
+/* Names Section */
+.names-section {
+  text-align: center;
+  margin: 35px 0;
+  padding: 30px 20px;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(26, 71, 42, 0.1));
+  border-radius: 20px;
+  border: 2px solid rgba(212, 175, 55, 0.4);
+  position: relative;
+}
+
+.names-header {
+  font-size: 1.2rem;
+  color: #5a6c5a;
+  margin-bottom: 20px;
+}
+
+.names-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.name-box {
+  text-align: center;
+}
+
+.name-label {
+  font-size: 1rem;
+  color: #d4af37;
+  margin-bottom: 8px;
+}
+
+.name {
+  font-size: 2.5rem;
+  color: #1a472a;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.heart-connector {
+  font-size: 2.5rem;
+  color: #c41e3a;
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  25% { transform: scale(1.2); }
+  50% { transform: scale(1); }
+  75% { transform: scale(1.15); }
+}
+
+/* Events Section */
+.events-section {
+  margin: 30px 0;
+}
+
+.events-title {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #1a472a;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.events-title-icon {
+  font-size: 1.5rem;
+  color: #d4af37;
+}
+
+/* Event Cards */
+.event-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 25px;
+  margin-bottom: 20px;
+  border: 2px solid transparent;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-3px);
+}
+
+.event-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Mehndi Card */
+.event-mehndi {
+  border-color: #ff6b35;
+  background: linear-gradient(135deg, #fff 0%, #fff5f0 100%);
+}
+
+.event-mehndi .event-icon { background: linear-gradient(135deg, #ff6b35, #ff8c42); }
+.event-mehndi .event-name { color: #ff6b35; }
+
+/* Barat Card */
+.event-barat {
+  border-color: #1a472a;
+  background: linear-gradient(135deg, #fff 0%, #f0f8f0 100%);
+}
+
+.event-barat .event-icon { background: linear-gradient(135deg, #1a472a, #2d5a2d); }
+.event-barat .event-name { color: #1a472a; }
+
+/* Walima Card */
+.event-walima {
+  border-color: #d4af37;
+  background: linear-gradient(135deg, #fff 0%, #fffef5 100%);
+}
+
+.event-walima .event-icon { background: linear-gradient(135deg, #d4af37, #e6c547); }
+.event-walima .event-name { color: #b8960c; }
+
+/* Event Header */
+.event-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.event-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.event-title-box {
+  flex: 1;
+}
+
+.event-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.event-name-urdu {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Event Details */
+.event-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 15px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 15px;
+  background: rgba(0,0,0,0.03);
+  border-radius: 12px;
+}
+
+.detail-icon {
+  font-size: 1.3rem;
+}
+
+.detail-content {
+  flex: 1;
+}
+
+.detail-label {
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 3px;
+}
+
+.detail-value {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Contact Section */
+.contact-section {
+  text-align: center;
+  margin: 30px 0;
+  padding: 25px;
+  background: linear-gradient(135deg, rgba(26, 71, 42, 0.1), rgba(212, 175, 55, 0.08));
+  border-radius: 20px;
+  border: 2px dashed #d4af37;
+}
+
+.contact-title {
+  font-size: 1.3rem;
+  color: #1a472a;
+  margin-bottom: 15px;
+}
+
+.contact-name {
+  font-size: 1.5rem;
+  color: #1a472a;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.contact-number {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #1a472a, #2d5a2d);
+  color: #fff;
+  border-radius: 30px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 5px 20px rgba(26, 71, 42, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.contact-number:hover {
+  transform: scale(1.05);
+}
+
+/* Dua Request */
+.dua-request {
+  text-align: center;
+  margin: 25px 0;
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(196, 30, 58, 0.08), rgba(255, 107, 157, 0.05));
+  border-radius: 15px;
+  border: 1px solid rgba(196, 30, 58, 0.2);
+}
+
+.dua-request-text {
+  font-size: 1.3rem;
+  color: #8b2942;
+  line-height: 2;
+}
+
+.dua-emoji {
+  font-size: 1.5rem;
+}
+
+/* Footer */
+.card-footer {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 2px solid rgba(212, 175, 55, 0.3);
+}
+
+.footer-text {
+  font-size: 1.1rem;
+  color: #5a6c5a;
+  line-height: 1.8;
+}
+
+.footer-dua {
+  font-size: 1.4rem;
+  color: #1a472a;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+/* Islamic Pattern Background */
+.pattern-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5 L35 25 L55 30 L35 35 L30 55 L25 35 L5 30 L25 25 Z' fill='rgba(212,175,55,0.03)'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Moon and Star Decoration */
+.moon-star {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.5rem;
+  color: #d4af37;
+  text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+  z-index: 3;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .card-content { padding: 40px 20px; }
+  .bismillah { font-size: 2rem; }
+  .name { font-size: 1.8rem; }
+  .names-container { flex-direction: column; gap: 10px; }
+  .heart-connector { margin: 10px 0; }
+  .event-header { flex-direction: column; text-align: center; }
+  .event-name { font-size: 1.5rem; }
+  .event-details { grid-template-columns: 1fr; }
+  .invitation-intro { font-size: 1.1rem; }
+  .host-name { font-size: 1.3rem; }
+  .corner { width: 40px; height: 40px; }
+  .dua-arabic { font-size: 1.3rem; }
+}
+
+@media (max-width: 400px) {
+  body { padding: 10px; }
+  .card-content { padding: 35px 15px; }
+  .bismillah { font-size: 1.6rem; }
+  .name { font-size: 1.5rem; }
+  .event-card { padding: 20px 15px; }
+  .contact-number { font-size: 1.1rem; padding: 10px 20px; }
+}
+</style>
+</head>
+<body>
+
+<div class="invitation-card">
+  <!-- Pattern Overlay -->
+  <div class="pattern-overlay"></div>
+  
+  <!-- Decorative Border -->
+  <div class="card-border"></div>
+  
+  <!-- Corner Decorations -->
+  <div class="corner corner-tl">
+    <svg viewBox="0 0 60 60">
+      <path d="M5 5 Q30 5 30 30 Q5 30 5 5" fill="none" stroke="#d4af37" stroke-width="2"/>
+      <circle cx="15" cy="15" r="3" fill="#d4af37"/>
+    </svg>
+  </div>
+  <div class="corner corner-tr">
+    <svg viewBox="0 0 60 60">
+      <path d="M5 5 Q30 5 30 30 Q5 30 5 5" fill="none" stroke="#d4af37" stroke-width="2"/>
+      <circle cx="15" cy="15" r="3" fill="#d4af37"/>
+    </svg>
+  </div>
+  <div class="corner corner-bl">
+    <svg viewBox="0 0 60 60">
+      <path d="M5 5 Q30 5 30 30 Q5 30 5 5" fill="none" stroke="#d4af37" stroke-width="2"/>
+      <circle cx="15" cy="15" r="3" fill="#d4af37"/>
+    </svg>
+  </div>
+  <div class="corner corner-br">
+    <svg viewBox="0 0 60 60">
+      <path d="M5 5 Q30 5 30 30 Q5 30 5 5" fill="none" stroke="#d4af37" stroke-width="2"/>
+      <circle cx="15" cy="15" r="3" fill="#d4af37"/>
+    </svg>
+  </div>
+  
+  <!-- Moon and Star -->
+  <div class="moon-star">☪</div>
+  
+  <!-- Content -->
+  <div class="card-content">
+    
+    <!-- Bismillah -->
+    <div class="bismillah-section">
+      <div class="bismillah">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْم</div>
+      <div class="bismillah-meaning">شروع اللہ کے نام سے جو بڑا مہربان نہایت رحم والا ہے</div>
+    </div>
+    
+    <!-- Decorative Line -->
+    <div class="decorative-line">
+      <span class="line"></span>
+      <span class="line-icon">✦</span>
+      <span class="line"></span>
+    </div>
+    
+    <!-- Islamic Dua -->
+    <div class="dua-section">
+      <div class="dua-arabic">
+        وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً
+      </div>
+      <div class="dua-translation">
+        اور اس کی نشانیوں میں سے ہے کہ اس نے تمہارے لیے تمہاری ہی جنس سے جوڑے بنائے تاکہ تم ان سے سکون حاصل کرو اور تمہارے درمیان محبت اور رحمت پیدا کر دی
+      </div>
+    </div>
+    
+    <!-- Invitation Text -->
+    <div class="invitation-text">
+      <p class="invitation-intro">
+        اللہ تعالیٰ کے فضل و کرم اور رحمتوں کے صدقے
+        <br>
+        آپ سب کی دعاؤں کا ثمر ہے کہ
+      </p>
+      <div class="host-name">
+        قیصر مقصود
+      </div>
+      <p class="invitation-request">
+        اپنی صاحبزادی کی شادی کی تقریب میں
+        <br>
+        آپ کو سپریم بچوں سمیت 
+        <br>
+        تشریف آوری کی درخواست کرتے ہیں
+      </p>
+    </div>
+    
+    <!-- Names Section -->
+    <div class="names-section">
+      <div class="names-header">✨ ہونے والے جوڑے ✨</div>
+      <div class="names-container">
+        <div class="name-box">
+          <div class="name-label">دلہن 👰</div>
+          <div class="name">ولیجہ بہار</div>
+        </div>
+        <div class="heart-connector">❤️</div>
+        <div class="name-box">
+          <div class="name-label">دولہا 🤵</div>
+          <div class="name">احمد فیاض</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Events Section -->
+    <div class="events-section">
+      <h2 class="events-title">
+        <span class="events-title-icon">🎊</span>
+        تقریبات کی تفصیل
+        <span class="events-title-icon">🎊</span>
+      </h2>
+      
+      <!-- Mehndi Event -->
+      <div class="event-card event-mehndi">
+        <div class="event-header">
+          <div class="event-icon">🎨</div>
+          <div class="event-title-box">
+            <div class="event-name">مہندی</div>
+            <div class="event-name-urdu">Mehndi Function</div>
+          </div>
+        </div>
+        <div class="event-details">
+          <div class="detail-item">
+            <span class="detail-icon">📅</span>
+            <div class="detail-content">
+              <div class="detail-label">تاریخ</div>
+              <div class="detail-value">22 مارچ 2025</div>
+            </div>
+          </div>
+          <div class="detail-item">
+            <span class="detail-icon">📆</span>
+            <div class="detail-content">
+              <div class="detail-label">دن</div>
+              <div class="detail-value">اتوار</div>
+            </div>
+          </div>
+          <div class="detail-item">
+            <span class="detail-icon">🕖</span>
+            <div class="detail-content">
+              <div class="detail-label">وقت</div>
+              <div class="detail-value">رات 7 بجے</div>
+            </div>
+          </div>
+          <div class="detail-item">
+            <span class="detail-icon">📍</span>
+            <div class="detail-content">
+              <div class="detail-label">مقام</div>
+              <div class="detail-value">سوہنی پیلس، ضفروال</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Barat Event -->
+      <div class="event-card event-barat">
+        <div class="event-header">
+          <div class="event-icon">💍</div>
+          <div class="event-title-box">
+            <div class="event-name">بارات / نکاح</div>
+            <div class="event-name-urdu">Barat / Nikah</div>
+          </div>
+        </div>
+        <div class="event-details">
+          <div class="detail-item">
+            <span class="detail-icon">📅</span>
+            <div class="detail-content">
+              <div class="detail-label">تاریخ</div>
+              <div class="detail-value">23 مارچ 2025</div>
+            </div>
+          </div>
+          <div class="detail-item">
+            <span class="detail-icon">📆</span>
+            <div class="detail-content">
+              <div class="detail-label">دن</div>
+              <div class="detail-value">پیر</div>
+            </div>
+          </div>
+          <div class="detail-item">
+            <span class="detail-icon">🕔</span>
+            <div class="detail-content">
+              <div class="detail-label">وقت</div>
+              <div class="detail-value">شام 5 بجے</div>
+            </div>
+          </div>
+          <div class="detail-item">
+            <span class="detail-icon">📍</span>
+            <div class="detail-content">
+              <div class="detail-label">مقام</div>
+              <div class="detail-value">سوہنی پیلس، ضفروال</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Walima Event -->
+      <div class="event-card event-walima">
+        <div class="event-header">
+          <div class="event-icon">🍽️</div>
+          <div class="event-title-box">
+            <div class="event-name">ولیمہ</div>
+            <div class="event-name-urdu">Walima</div>
+          </div>
+        </div>
+        <div class="event-details">
+          <div class="detail-item">
+            <span class="detail-icon">📅</span>
+            <div class="detail-content">
+              <div class="detail-label">تاریخ</div>
+              <div class="detail-value">24 مارچ 2025</div>
+            </div>
+          </div>
+          <div class="detail-item">
+            <span class="detail-icon">📆</span>
+            <div class="detail-content">
+              <div class="detail-label">دن</div>
+              <div class="detail-value">منگل</div>
+            </div>
+          </div>
+          <div class="detail-item">
+            <span class="detail-icon">🕖</span>
+            <div class="detail-content">
+              <div class="detail-label">وقت</div>
+              <div class="detail-value">رات 7 بجے</div>
+            </div>
+          </div>
+          <div class="detail-item">
+            <span class="detail-icon">📍</span>
+            <div class="detail-content">
+              <div class="detail-label">مقام</div>
+              <div class="detail-value">سوہنی پیلس، ضفروال</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Dua Request -->
+    <div class="dua-request">
+      <p class="dua-request-text">
+        <span class="dua-emoji">🤲</span>
+        آپ سب سے گزارش ہے کہ اس مبارک موقع پر
+        <br>
+        دونوں خاندانوں کو اپنی دعاؤں میں یاد رکھیں
+        <br>
+        اللہ تعالیٰ اس جوڑے کو ہمیشہ خوش و آباد رکھے
+        <span class="dua-emoji">🤲</span>
+      </p>
+    </div>
+    
+    <!-- Contact Section -->
+    <div class="contact-section">
+      <div class="contact-title">رابطہ کے لیے</div>
+      <div class="contact-name">قیصر مقصود</div>
+      <a href="tel:03495589669" class="contact-number">
+        <span>📞</span>
+        <span>0349-5589669</span>
+      </a>
+    </div>
+    
+    <!-- Decorative Line -->
+    <div class="decorative-line">
+      <span class="line"></span>
+      <span class="line-icon">☪</span>
+      <span class="line"></span>
+    </div>
+    
+    <!-- Footer -->
+    <div class="card-footer">
+      <p class="footer-text">
+        آپ کی آمد ہماری خوشیوں میں اضافہ کرے گی
+        <br>
+        براہ کرم ضرور تشریف لائیں
+      </p>
+      <div class="footer-dua">
+        جزاک اللہ خیراً
+        <br>
+        💕 السلام علیکم 💕
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+</body>
+</html>
